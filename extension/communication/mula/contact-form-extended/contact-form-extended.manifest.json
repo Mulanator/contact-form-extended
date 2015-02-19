@@ -1,0 +1,26 @@
+{
+	"manifest": "contact-form-extended",
+	"type": "communication",
+	"handle": "mula",
+	"extension": "contact-form-extended",
+	"name": "Contact Form Extended",
+	"author": "Joerg Reisslein",
+	"version": 1,
+	"created": 1423842364,
+	"view" : "contact-form",
+	"description": "Requires razorCMS 3.4.7+. Displays an extended contact form to allow people to email you directly from your website. If you need a recaptcha key, visit https://www.google.com/recaptcha/",
+	"dependancies": [
+		{"type": "rars", "name": "Email class", "path": "rars/api/extension/communication/mula/contact-form-extended/email.php"},
+		{"type": "rars", "name": "Settings class", "path": "rars/api/extension/communication/mula/contact-form-extended/settings.php"}
+	],
+	"content_settings": [],
+	"settings": [
+		{"name": "email", "label": "E-Mail receiver:", "placeholder": "Email address to send messages to", "value": "someone@dot.com"},
+		{"name": "success", "label": "Success:", "placeholder": "Text to display when email was sent successfully", "value": "Thank you, your message has been sent."},
+		{"name": "error", "label": "Error:", "placeholder": "Text to display when an error occured", "value": "Could not send message, please try again later."},
+		{"name": "nohuman", "label": "Captcha Fail:", "placeholder": "Text to display when captcha validation fails", "value": "You did not pass the human test, please try again."},
+		{"name": "captcha", "label": "Use Recaptcha:", "placeholder": "true or false", "value": "true", "type": "bool"},
+		{"name": "theme", "label": "Recaptcha theme:", "placeholder": "white or dark", "value": "white"},
+		{"name": "captchakey", "label": "ReCaptcha Key:", "placeholder": "your domain key for using google recaptcha services", "value": "6LcrK9cSAAAAALEcjG9gTRPbeA0yAVsKd8sBpFpR"}
+	]
+}
