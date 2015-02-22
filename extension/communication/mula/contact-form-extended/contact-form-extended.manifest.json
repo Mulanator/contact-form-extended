@@ -16,6 +16,7 @@
 	"content_settings": [],
 	"settings": [
 		{"name": "email", "label": "E-Mail receiver:", "placeholder": "Email address to send messages to", "value": "someone@dot.com"},
+		{"name": "envelopefrom", "label": "Envelope-From:", "placeholder": "Email address to use on envelope", "value": ""},
 		{"name": "success", "label": "Success:", "placeholder": "Text to display when email was sent successfully", "value": "Thank you, your message has been sent."},
 		{"name": "error", "label": "Error:", "placeholder": "Text to display when an error occured", "value": "Could not send message, please try again later."},
 		{"name": "nohuman", "label": "Captcha Fail:", "placeholder": "Text to display when captcha validation fails", "value": "You did not pass the human test, please try again."},

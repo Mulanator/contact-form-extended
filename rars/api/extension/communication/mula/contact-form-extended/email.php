@@ -65,6 +65,7 @@ class ExtensionCommunicationMulaContactformExtendedEmail extends RazorAPI
 
 		// clean email data
 		$to = $extension_settings->email;
+		$envelopefrom = '-f' .$extension_settings->envelopefrom;
 		$from = preg_replace('/[^A-Za-z0-9-_+@.]/', '', $data["email"]);
 		$subject = "{$site_name} Contact Form";
 		$message = "Message from ."$data["name"]."\r\n";
@@ -75,7 +76,7 @@ class ExtensionCommunicationMulaContactformExtendedEmail extends RazorAPI
 				. "\r\nContent-type:text/html;charset=UTF-8"
 				. "X-Mailer: PHP/". phpversion();
 
-		if (mail($to, $subject, $message, $headers)) {			
+		if (mail($to, $subject, $message, $headers, $envelopefrom)) {			
 			// return the basic user details
 			$this->response("success", "json");
 		} else {		
